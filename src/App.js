@@ -1,9 +1,13 @@
 import './App.css';
+import books from "./books.json";
+import Card from "./Card";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello!</h1>
+    <div className="Container">
+      {books.map((item) => (
+        <Card {...item} key={item.name} />
+      ))}
     </div>
   );
 }
